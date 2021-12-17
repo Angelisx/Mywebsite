@@ -1,0 +1,167 @@
+*{
+  padding:0;
+  margin:0;
+  font-family:sans-serif;
+  box-sizing:border-box;
+}
+
+
+body{
+  background:black;
+
+
+}
+
+
+.container{
+  text-align:center;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+.container span{
+  color:white;
+  text-transform:uppercase;
+  display:block;
+}
+.text1{
+  font-size:60px;
+  font-weight:700;
+  letter-spacing:8px;
+  margin-bottom:-70px;
+  background:transparent;
+  position:relative;
+  animation: text 3s 1;
+
+}
+
+
+
+@keyframes text {
+  0%{
+    color:black;
+    margin-bottom:-40px;
+  }
+  30%{
+    letter-spacing:25px;
+    margin-bottom:-40px;
+
+  }
+  85%{
+    letter-spacing:8px;
+    margin-bottom:-40px;
+  
+  }
+
+
+
+}
+/*this is for Parrallax effect*/
+.container2{
+  max-width:100%;
+  margin:0 auto;
+  background:black;
+  font-size:24px;
+  padding:25px;
+  color:white;
+  position:relative;
+  bottom:0;
+}
+
+
+.heading{
+  display:flex;
+  justify-content:center;
+  color:antiquewhite;
+}
+/*This is the nav bar*/
+
+nav{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  min-height:8vh;
+  background-color:black;
+}
+.logo{
+  color:bisque;
+  text-transform:uppercase;
+  letter-spacing:5px;
+  font-size:20px;
+}
+
+.nav-links{
+  display:flex;
+  justify-content:space-around;
+  list-style:none;
+  width:30%;
+}
+.nav-links a{
+  color:bisque;
+  text-decoration:none;
+  letter-spacing:3px;
+  font-weight:bold;
+  font-size:14px;
+}
+
+.burger{
+  display:none;
+}
+
+.burger div{
+  height:3px;
+  width:25px;
+  background-color:white;
+  margin:5px;
+}
+@media screen and (max-width:1024px){
+  .nav-links{
+    width:60%;
+  }
+
+}
+
+@media screen and (max-width:768px){
+  body{
+    overflow-x:hidden;
+  }
+  .nav-links{
+    position:absolute;
+    right:0px;
+    height:92vh;
+    top:8vh;
+    background-color:grey;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:50%;
+    transform:translateX(100%);
+    transition:transform 10s ease-in;
+
+  }
+  
+  .burger{
+    display:block;
+    cursor:pointer;
+  }
+}
+
+.nav:active{
+  transform:translateX(0%);
+}
+
+
+
+
+.box{
+    
+    width: 30%;
+}
+
+.a:hover + .box,.box:hover{
+  display: inline;
+  position: relative;
+  z-index: 100;
+}

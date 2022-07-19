@@ -37,6 +37,15 @@ body{
 
 }
 
+.text2{
+  font-size:15px;
+  font-weight:700;
+  letter-spacing:8px;
+  margin-bottom:-70px;
+  background:transparent;
+  animation: text 3s 1;
+}
+
 
 
 @keyframes text {
@@ -58,6 +67,7 @@ body{
 
 
 }
+
 /*this is for Parrallax effect*/
 .container2{
   max-width:100%;
